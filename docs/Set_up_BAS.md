@@ -11,4 +11,5 @@ For that, it is necessary  to have a subaccount in SAP BTP to be able to subscri
 4. Choose a **Dev Space Name** (e.g. `IncidentsManagement`).
 5. Choose template **Full stack Cloud Application** and choose **Create Dev Space**
 
-    ![]()
+> **Info**
+> Now your dev space will be created. This can take some minutes.
