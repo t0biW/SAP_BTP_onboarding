@@ -158,4 +158,4 @@ As you can see in the log output, the new file created generic service provider 
 
 `Command+click` to open the link `https://port4004-workspaces-ws-9pjlw.us10.applicationstudio.cloud.sap/launchpage.html#Shell-home` from SAP Business Application Studio in your browser, you'll see the generic index.html page:
 
-
+![HTML page on localhost](../pictures/Generic_Html_page.png)
