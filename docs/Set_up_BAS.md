@@ -11,5 +11,13 @@ For that, it is necessary  to have a subaccount in SAP BTP to be able to subscri
 4. Choose a **Dev Space Name** (e.g. `IncidentsManagement`).
 5. Choose template **Full stack Cloud Application** and choose **Create Dev Space**
 
-> **Info**
-> Now your dev space will be created. This can take some minutes.
+> **_INFO:_** Now your dev space will be created. This can take some minutes.
+
+6. As soon as your dev space is in status `Running`, you can click its name to open it.
+
+Congratulations!
+By that, you've successfully completed the setup guide of SAP BAS. 
+
+# Next Steps 
+
+After you have set up SAP Business Application Studio, it's time to create your application based on SAP Cloud Application Programming Model (CAP). See [Build a CAP Application](Build_a_CAP_Application.md).
