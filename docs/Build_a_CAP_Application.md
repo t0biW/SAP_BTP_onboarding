@@ -7,13 +7,13 @@ You have the SAP Business Application Studio configured. See [Set Up SAP Busines
 1. In SAP Business Application Studio, click the burger menu at the top left corner and choose **Terminal** &rarr; **New Terminal**
 2. Navigate to the projects folder from the root directory.
 
-```
+```bash
 cd projects
 ```
 
 3. Create a new project using `cds init`.
 
-```
+```bash
 cds init incidents-mgmt
 ```
 
@@ -28,7 +28,7 @@ This creates a folder `incidents-mgmt` with your newly created CAP project.
 
 > **_INFO:_** you need to be in the project, i.e. first navigate to your project in hte terminal via `cd ./projects/incidents-mgmt`.
  
-```
+```bash
 cds watch
 ```
 
@@ -158,4 +158,115 @@ As you can see in the log output, the new file created generic service provider 
 
 `Command+click` to open the link `https://port4004-workspaces-ws-9pjlw.us10.applicationstudio.cloud.sap/launchpage.html#Shell-home` from SAP Business Application Studio in your browser, you'll see the generic index.html page:
 
-![HTML page on localhost](../pictures/Generic_Html_page.png)
+![HTML page on localhost](../docs/pictures/Generic_Html_page.png)
+
+> **_INFO:_** You may have to stop the CAP server with `Ctrl + c` and restart it with the `cds watch` command.
+
+---
+
+# Add Data to You Database
+
+Since we already have an SQLite in-memory database that was automatically created earlier, let's now fill it with some test data.
+
+## generate `.csv` Templates
+
+1. Run the following command in the root folder of your project (incidents-mgmt):
+
+```bash
+cds add data
+```
+2. Check the output.
+
+```
+Adding feature(s) to project in current folder
+
+Adding feature 'data'...
+Creating db\data\sap.capire.incidents-Incidents.csv
+Creating db\data\sap.capire.incidents-Customers.csv
+Creating db\data\sap.capire.incidents-Conversations.csv
+Creating db\data\sap.capire.incidents-Status.csv
+Creating db\data\sap.capire.incidents-Urgency.csv
+Creating db\data\sap.capire.incidents-Status.texts.csv
+Creating db\data\sap.capire.incidents-Urgency.texts.csv
+Done adding features
+```
+
+## Fill In Test Data
+
+Replace the generated `.csv` templates with the following content:
+
+- `db/data/sap.capire.incidents-Customers.csv`:
+
+```
+ID,firstName,lastName,email,phone
+8fc8231b-f6d7-43d1-a7e1-725c8e988d18,Daniel,Watts,daniel.watts@demo.com,+44-555-123
+feb04eac-f84f-4232-bd4f-80a178f24a17,Stormy,Weathers,stormy.weathers@demo.com,
+2b87f6ca-28a2-41d6-8c69-ccf16aa6389d,Sunny,Sunshine,sunny.sunshine@demo.com,+01-555-789
+```
+
+- `db/data/sap.capire.incidents-Incidents.csv`:
+
+```
+ID,customer_ID,title,urgency_code,status_code
+3b23bb4b-4ac7-4a24-ac02-aa10cabd842c,8fc8231b-f6d7-43d1-a7e1-725c8e988d18,Inverter not functional,H,C
+3a4ede72-244a-4f5f-8efa-b17e032d01ee,feb04eac-f84f-4232-bd4f-80a178f24a17,No current on a sunny day,H,N
+3ccf474c-3881-44b7-99fb-59a2a4668418,feb04eac-f84f-4232-bd4f-80a178f24a17,Strange noise when switching off Inverter,M,N
+3583f982-d7df-4aad-ab26-301d4a157cd7,2b87f6ca-28a2-41d6-8c69-ccf16aa6389d,Solar panel broken,H,I
+```
+  
+- `db/data/sap.capire.incidents-Incidents.conversation.csv`:
+
+```
+ID,up__ID,timestamp,author,message
+2b23bb4b-4ac7-4a24-ac02-aa10cabd842c,3b23bb4b-4ac7-4a24-ac02-aa10cabd842c,1995-12-17T03:24:00Z,Harry John,Can you please check if battery connections are fine?
+2b23bb4b-4ac7-4a24-ac02-aa10cabd843c,3a4ede72-244a-4f5f-8efa-b17e032d01ee,1995-12-18T04:24:00Z,Emily Elizabeth,Can you please check if there are any loose connections?
+9583f982-d7df-4aad-ab26-301d4a157cd7,3583f982-d7df-4aad-ab26-301d4a157cd7,2022-09-04T12:00:00Z,Sunny Sunshine,Please check why the solar panel is broken
+9583f982-d7df-4aad-ab26-301d4a158cd7,3ccf474c-3881-44b7-99fb-59a2a4668418,2022-09-04T13:00:00Z,Bradley Flowers,What exactly is wrong?
+```
+
+- `db/data/sap.capire.incidents-Status.csv`:
+
+```
+code;descr;criticality
+N;New;3
+A;Assigned;2
+I;In Process;2
+H;On Hold;3
+R;Resolved;2
+C;Closed;4
+```
+  
+- `db/data/sap.capire.incidents-IUrgency.csv`:
+
+```
+code;descr
+H;High
+M;Medium
+L;Low
+```
+
+> **_NOTE:_** The `cds add data` command added seven files, though we do not add data to the `.tests.csv` files because they hold translated text once the app is localized and translations are created.
+
+Upon detecting these new files, the CAP server with an output telling us that the content of the files has been filled into the database automatically:
+
+```
+[cds] - connect to db > sqlite { database: ':memory:' }
+  > init from db\data\sap.capire.incidents-Incidents.conversation.csv 
+  > init from db\data\sap.capire.incidents-Customers.csv 
+  > init from db\data\sap.capire.incidents-Incidents.csv 
+  > init from db\data\sap.capire.incidents-Status.csv 
+  > init from db\data\sap.capire.incidents-Status.texts.csv 
+  > init from db\data\sap.capire.incidents-Urgency.csv 
+  > init from db\data\sap.capire.incidents-Urgency.texts.csv 
+/> successfully deployed to in-memory database.
+```
+
+Now that we've a database filled with some initial data, we can send complex OData queries served by the built-in generic service providers. In order to view the results of these queries, append the paths given below to the URL `https://port4004-workspaces-ws-9pjlw.us10.applicationstudio.cloud.sap/launchpage.html#Shell-home`, which can be opened by doing a Command+Click, and search.
+
+- /odata/v4/processors/Incidents
+
+![](../docs/pictures/HTML_Incidents_1.png)
+![](../docs/pictures/HTML_Incidents_2.png)
+  
+- /odata/v4/processors/Customers?$select=firstName&$expand=incidents
+
