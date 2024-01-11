@@ -270,3 +270,25 @@ Now that we've a database filled with some initial data, we can send complex ODa
   
 - /odata/v4/processors/Customers?$select=firstName&$expand=incidents
 
+---
+
+# Adding Calculated Elements
+
+Modify and add the following in `srv/processors-service.cds`:
+
+```
+service ProcessorsService {
+  ...
+}
+extend projection ProcessorsService.Customers with { //[!code focus]
+  firstName || ' ' || lastName as name: String
+}
+```
+
+---
+
+# Next Steps
+
+After you have created your CAP application, you can start working on its user interface. See [Add Fiori Elements UIs](Add_Fiori_Elements_UIs.md).
+
+
