@@ -106,7 +106,6 @@ This defines which of the properties are exposed as search fields in the header 
 7. Choose the globe icon to generate a translatable text key. When prompted to confirm the generation, press **Apply**.
 
 <img src="../docs/pictures/Configure_List_Report_5.png" alt="" width="800"/>
-![](../docs/pictures/Configure_List_Report_5.png)
 
 8. Repeat steps 5-7 above to also update the label of the filter `status_code` to `Status`.
 
@@ -119,5 +118,45 @@ In the popup, select `descr` as the `Value Description Property` and press **App
 12. Select **status_code** under **Columns**. In the right pane, set **Text** to **status/descr** and **Text Arrangement** to **Text Only**,
     so that the user could see the human readable text instead of the status code.
     
+13. Navigate to `Customer` and select `name`. Click `Add` to add columns.
+
+> **_TIPP:_** To easily find this field, type the first few characters of `Customer`, followed by a `/` and a few characters of `name`, such as: `cus/n`.
+
+14. The `name` column is added as the last column, make it the second column: select it, click on the `^` button to move the column up or just
+15. drag it up and drop at the second position. Similarly, move `Urgency` column to the last position.
+
+16. The column labels are text strings, update them and make them internationalisation (i18n) compliant as you did for filters in steps 5-7:
+
+Generated text key | Updated text key
+ ---|---
+name | Customer
+Description (urgency/descr) | Urgency
+Description (status/descr) | Status
+
+16. Choose **Table** and set the value of **Initial Load** field on the right to **Enabled** to load data automatically.
+
+<img src="../docs/pictures/Configure_List_Report_6.png" alt="" width="800"/>
+
+17. Set the value of **Type** field to **ResponsiveTable** to make the table responsive.
+
+18. Choose **Table** &rarr; **Columns** &rarr; **Status** and set the value of **Criticality** field on the right to **status/criticality**.
+
+<img src="../docs/pictures/Configure_List_Report_7.png" alt="" width="800"/>
+
+19. The list page of hte incident app should look like this below.
+
+<img src="../docs/pictures/Configure_List_Report_8.png" alt="" width="800"/>
+
+20. Navigate back to the page editor and choose **Page Map** in the top left corner. This takes you back to the overview of the incident app.
+
+## Configure the Object Page
 
 
+
+
+
+
+
+
+
+ 
