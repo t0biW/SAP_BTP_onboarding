@@ -65,33 +65,35 @@ This opens a dropdown at hte top offering all `cds run` and `cds watch`-based sc
 
 2. Choose npm script **watch-incidents**.
 
-![](../docs/pictures/NPM_Script.png)
+<img src="../docs/pictures/NPM_Script.png" alt="" width="800"/>
 
 This runs the service in an application modeler terminal session and automatically starts the SAP Fiori application in a new browser session.
 
 3. You can now see the application with the generated columns. Choose **Go**.
 
-![](../docs/pictures/NPM_Script_2.png)
+<img src="../docs/pictures/NPM_Script_2.png" alt="" width="800"/>
 
 ## Configure the List Report Page
 
 1. Choose **Open Page Map** under **Application Info - Incidents** tab.
 
+<img src="../docs/pictures/Configure_List_Report_1.png" alt="" width="800"/>
 ![](../docs/pictures/Configure_List_Report_1.png)
 
 You will see the properties on the right side of the page map. You can edit these to update the UI of the application.
 
 2. Choose the pencil icon in the page map next to the title to start configuring the **List Report** page.
 
-![](../docs/pictures/Configure_List_Report_2.png)
+<img src="../docs/pictures/Configure_List_Report_2.png" alt="" width="400"/>
+
 
 3. Select **Filter Fields** under **Filter Bar** and click on the icon to add filter fields.
 
-![](../docs/pictures/Configure_List_Report_3.png)
+<img src="../docs/pictures/Configure_List_Report_3.png" alt="" width="400"/>
 
 4. In the droppdown, select `status_code`, `urgency_code`, and choose **Add**. Your application will update and show the new filters.
 
-![](../docs/pictures/Configure_List_Report_4.png)
+<img src="../docs/pictures/Configure_List_Report_4.png" alt="" width="800"/>
 
 This defines which of the properties are exposed as search fields in the header bar above the list.
 
@@ -103,10 +105,19 @@ This defines which of the properties are exposed as search fields in the header 
 
 7. Choose the globe icon to generate a translatable text key. When prompted to confirm the generation, press **Apply**.
 
-![](../docs/pictures/Configure_List_Report_4.png)
+<img src="../docs/pictures/Configure_List_Report_5.png" alt="" width="800"/>
+![](../docs/pictures/Configure_List_Report_5.png)
 
 8. Repeat steps 5-7 above to also update the label of the filter `status_code` to `Status`.
 
+9. Update the value of the **Display Type** field to `Value Help` for both the `urgency` and `Status` filters.
+In the popup, select `descr` as the `Value Description Property` and press **Apply**.
 
+10. Navigate to **Table** &rarr; **Columns** and select **urgency_code**. In the right pane, set **Text** to **urgency/descr** and **Text Arrangement** to **Text Only**,
+    so that the user could see the human readable text instead of the urgency code.
+
+12. Select **status_code** under **Columns**. In the right pane, set **Text** to **status/descr** and **Text Arrangement** to **Text Only**,
+    so that the user could see the human readable text instead of the status code.
+    
 
 
