@@ -151,12 +151,16 @@ Description (status/descr) | Status
 
 ## Configure the Object Page
 
+1. In the page map, choose the pencil icon next to the `Object Page IncidentsObjectPage` title to start configuring the object page.
 
+2. Choose `Header` and set the value of the **Title** field on the right to **title**.
 
+<img src="../docs/pictures/Configure_the_Object_Page_1.png" alt="" width="800"/>
 
+3. Set the value of the **Description Type** field to **Property**. A popup opens.
 
+4. From the drop down, select **name** under **Customer** and choose **Apply**.
 
-
-
+<img src="../docs/pictures/Configure_the_Object_Page_2.png" alt="" width="800"/>
 
  
