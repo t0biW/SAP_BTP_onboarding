@@ -155,12 +155,12 @@ Description (status/descr) | Status
 
 2. Choose `Header` and set the value of the **Title** field on the right to **title**.
 
-<img src="../docs/pictures/Configure_the_Object_Page_1.png" alt="" width="800"/>
+<img src="../docs/pictures/Configure_the_Object_Page_1.png" alt="" width="500"/>
 
 3. Set the value of the **Description Type** field to **Property**. A popup opens.
 
 4. From the drop down, select **name** under **Customer** and choose **Apply**.
 
-<img src="../docs/pictures/Configure_the_Object_Page_2.png" alt="" width="800"/>
+<img src="../docs/pictures/Configure_the_Object_Page_2.png" alt="" width="500"/>
 
  
