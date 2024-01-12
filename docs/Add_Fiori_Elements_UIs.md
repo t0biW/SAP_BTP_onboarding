@@ -163,4 +163,84 @@ Description (status/descr) | Status
 
 <img src="../docs/pictures/Configure_the_Object_Page_2.png" alt="" width="500"/>
 
+5. Set the value of the **Icon URL** field to `sap-icon://alert`.
+
+6. Navigate to `Sections` &rarr; `General Informations` &rarr; `Form` &rarr; `Fields` and delete `urgency_code` and `status_code`.
+
+7. Navigate to `Sections`, click on the icon to add sections and choose `Add Group Section` from hte dropdown. Enter `Overview` as the Label and internationalize it by clicking on hte globe icon.
+   Then,click on `Add`.
+
+<img src="../docs/pictures/Configure_the_Object_Page_3.png" alt="" width="500"/>
+
+8. Navigate to `Subsections` from `Overview` section, click on the icon to add sections and choose `Add Form Section` from the dropdown. 
+Enter `Details` as the Label and internationalize it by clicking on the globe icon. Then, click on `Add`.
+
+9. Navigate to `Form` &rarr; `Fields` and choose Add Basic Fields.
+
+<img src="../docs/pictures/Configure_the_Object_Page_4.png" alt="" width="500"/>
+
+10. Select `status_code` and `urgency_code` from the drop down. Choose `Add` to add the fields to the form.
+
+11. Change the labels of `status_code` to `Status` and `urgency_code` to `Urgency` respectively. Also, internationilize it by selecting the `globe` icon.
+
+12. Now for the `Status` field, choose `Display Type` as `Value Help` on the right pane of page map. Select `Status` as `Value Source Entity`, `code` as `Value Source Property` and `descr` as `Value Description Property`. Do the same for `Urgency` field as well. Choose `Text` as `status/descr` and `urgency/descr` respectively in the right pane.
+
+13. Set the value in the `Text` field to match that in the value help by clicking the `Take over text` button next to the field.
+
+14. Navigate to `Sections` &rarr; `General` Information and generate a translatable text key by choosing the `Globe` icon in the Label field for General Information.
+
+15. Navigate to `Sections` &rarr; `General Information` &rarr; `Form` &rarr; `Fields` choose the `+` sign to add more fields and choose `Add Basic Fields`.
  
+16. From the popup of `Add Basic Fields`, select `Customer_ID` from the dropdown and choose `Add`.
+
+17. Navigate to `Sections` &rarr; `General Information` &rarr; `Form` &rarr; `Fields` and change the Label value of `customer_ID` to `Customer`. Generate a translatable text by clicking on the `Globe` icon.
+
+18. For the same `Customer` field, navigate to the `Text` dropdown and choose `customer/name`. Similarly choose `Text Only`, from the `Text Arrangement` dropdown. Then click on `Edit properties for Value Help` under `Display Type` and toggle off `Display as a dropdown`. Click `Apply`.
+
+19. Navigate to `Sections` and drag `General Information` into `Overview` &rarr; `Subsections`.
+
+20. Navigate to `Sections`, click on the icon to add sections and choose `Add Table Section`.
+
+21. Enter `Conversation` in the `Label` field, choose `conversation` from the `Value Source` drop down and press `Add`.
+
+<img src="../docs/pictures/Configure_the_Object_Page_5.png" alt="" width="500"/>
+
+22. Navigate to `Conversation` &rarr; `Table` &rarr; `Columns`, click on the icon to add columns, and choose `Add Basic Columns` from the dropdown.
+
+23. Select `timestamp`, `author`, `message` and press `Add`.
+
+24. Choose the `timestamp` column, change the value in the `Label` field to `Conversation Date`.
+
+25. Update the labels for the columns `author` and `message`. Internationalize all labels that are not yet prepared for translation by clicking on the globe icon on the top of the screen.
+    Press `Apply` in the pop-up to confirm the generation of text keys.
+
+27. Choose `Table` and set the value of the `Type` field on the right pane to `ResponsiveTable` to make the table responsive.
+
+28. Set `Creation Mode : Name` on the right pane to `Inline`.
+
+29. The complete list object page looks like below
+
+<img src="../docs/pictures/Configure_the_Object_Page_6.png" alt="" width="500"/>
+
+## Draft-Based Editing
+
+SAP Fiori supports editing business entities with draft states stored on the server, so users can interrupt editing and continue later on, possibly from different places and devices. CAP, as well as SAP Fiori elements, provide out-of-the-box support for drafts. We recommend to always use draft when your SAP Fiori application needs data input by end users.
+
+## Enabling Draft with `@odata.draft.enabled`
+
+Open the file `proccessors-service.cds` which is in the `./srv` folder.
+
+Enabling draft for an entity allows the users to edit the entities. To enable draft for an entity exposed by a service, simply annotate it with `@odata.draft.enabled` as in this example:
+
+---
+service ProcessorsService { 
+  ...
+}
+...
+annotate ProcessorsService.Incidents with @odata.draft.enabled; //[!code focus]
+---
+
+# Next Steps
+
+You have added user interface to your application. The next step is to develop the business logic of your application.
+See [Add Custom Logic](Add_Custom_Logic.md).
