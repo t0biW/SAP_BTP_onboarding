@@ -2,7 +2,7 @@
 
 The following steps comprise a beginner's tutorial for developing applications on SAP BTP. These guides will help you build and deploy a full-stack application.
 
-1. [Set Up SAP Business Apllication Studio](Set_up_BAS.md)
+1. [Set Up SAP Business Application Studio](Set_up_BAS.md)
 2. [Build a CAP Application](Build_a_CAP_Application.md)
 3. [Add Fiori Elements UIs](Add_Fiori_Elements_UIs.md)
 4. [Add Custom Logic](Add_Custom_Logic.md)
