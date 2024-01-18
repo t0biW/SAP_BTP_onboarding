@@ -23,3 +23,62 @@ annotate ProcessorsService with @(requires: 'support'); //[!code focus]
 ```
 
 With this change, a user with the role `support` can view and change the incidents and customers.
+
+## Add Mocked Users for Local Testing
+
+CAP offers a possibility to add local users for testing as part of the `cds` configuration. In this tutorial, we use the `development` profile in `package.json` file to add the users.
+
+1. Add the following to the `cds requires` section in the `package.json` file:
+
+```json
+{
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {}
+        }
+      }
+    }
+  }
+}
+```
+
+This defines which configuration to use when running with the `development` profile.
+Let's add some test users.
+
+2. Replace the empty `users` object in the `package.json` with the following code:
+
+```json
+  "users": {
+      "incident.support@tester.sap.com": {
+        "password": "initial",
+        "roles": ["support"]
+      },
+      "alice": {
+         "roles": ["support"]
+      },
+      "bob": {
+         "roles": ["support"]
+      }
+  }
+```
+
+## Access the Incident Management Application with Pasword
+
+When accessing the `Incidents` service in your browser, you get a basic auth popup now, asking for your user and password. You can use the users to log in and see how it works.
+
+1. With `cds watch` running, go to `https://port4004-workspaces-ws-9pjlw.us10.applicationstudio.cloud.sap/launchpage.html#Shell-home`.
+
+2. Choose **Incidents** and choose **Go**.
+
+3. Enter **Username**: `incident.support@tester.sap.com`.
+
+4. Enter **Password**: `initial`.
+
+You can now access the `Incidents` application.
+
+## Next Steps
+
+You have configured the access to your application. Now we can prepare the application for production. See [Prepare for Production](Prepare_for_Production.md). 
