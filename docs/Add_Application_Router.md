@@ -63,5 +63,5 @@ This file has the configurations to start the app router.
 ## Next Steps: Deploy to Cloud Foundry
 
 Before deploying to Cloud Foundry, you have to replace the launch page you used for local 
-testing with a launchpad provided by the Portal service. See [Add Launchpad](Set_UP_Launchpad.md).
+testing with a launchpad provided by the Portal service. See [Add Launchpad](Set_Up_Launchpad.md).
 
