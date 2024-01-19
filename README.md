@@ -1,4 +1,9 @@
-It contains these folders and files, following our recommended project layout:
+# Building an application with CAP using BAS
+
+This is an onboarding guide is a tutorial based on the Incident management Sample Application.
+the complete Guide through this tutorial can be found [here](./docs/Main.md).
+
+besides that, this repository provides the sample application after following the Guide. It contains these folders and files:
 
 File or Folder | Purpose
 ---------|----------
@@ -6,16 +11,5 @@ File or Folder | Purpose
 `db/` | your domain models and data go here
 `srv/` | your service models and code go here
 `package.json` | project metadata and configuration
-`readme.md` | this getting started guide
 
-
-## Next Steps
-
-- Open a new terminal and run `cds watch` 
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
+However, we strongly recommend to follow our [Onboarding Guide](./docs/Main.md) to experience the procedure of building an application yourself.
