@@ -1,8 +1,12 @@
-# use a Local Lunch Page
+# Navigation
 
-## Prerequisits
+**Previous Steps**
+[Add Custom Logic](04_Add_Custom_Logic.md).
 
-You have added business logic to your application. See [Add Custom Logic](Add_Custom_Logic.md).
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Add Authorization](06_Add_Authorization.md).
 
 ## Introduction
 
@@ -100,4 +104,12 @@ application can be added to the launch page by adding an entry here.
 ## Next Steps
 
 You have added a launch page for local testing. You can now configure who has access to 
-your application. See [Add Authorization](Add_Authorization.md).
+your application. 
+
+**Previous Steps**
+[Add Custom Logic](04_Add_Custom_Logic.md).
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Add Authorization](06_Add_Authorization.md).
