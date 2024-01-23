@@ -1,3 +1,14 @@
+# Navigation
+
+**Previous Steps**
+[Add Application Router](08_Add_Application_Router.md).
+
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Deploy and Test App in SAP BTP](10_Deploy_and_Test_App_in_SAP_BTP.md).
+
 # Add Lanchpad
 
 In this tutorial, you will replace the launch page that we used for local testing 
@@ -6,9 +17,7 @@ application, including personalization, UI flexibility, and role-based visibilit
 
 ## Prerequisites
 
-- Have an application router added to your application. See [Add Application Router](Add_Application_Router.md).
-
-- Make sure that your subaccount has quota for the Portal service and the HTML5 Applications Repository service
+Make sure that your subaccount has quota for the Portal service and the HTML5 Applications Repository service
   for SAP BTP.
 
 ## Overview
@@ -439,8 +448,13 @@ Add the following `role-template` named `Token_Exchange` to the `xs-security.jso
 }
 ```
 
-## Next Steps
+# Navigation
 
-You have replaced the launch page that you have used for local testing with a launchpad 
-using the Portal service. Now you can deploy your application in SAP BTP or Cloud Foundry 
-and test it. See [Deploy in SAP BTP](Deploy_and_Test_App_in_SAP_BTP.md).
+**Previous Steps**
+[Add Application Router](08_Add_Application_Router.md).
+
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Deploy and Test App in SAP BTP](10_Deploy_and_Test_App_in_SAP_BTP.md).
