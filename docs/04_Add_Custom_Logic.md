@@ -6,7 +6,7 @@
 [Table of Contents](Table_of_Contents.md)
 
 **Next Steps:**
-[Use a Local Launch Page](05_Use_a_Local_Launch_page.md)
+[Use a Local Launch Page](05_Use_a_Local_Launch_Page.md)
 
 ## Add Custom Logic 
 
@@ -66,4 +66,4 @@ module.exports = ProcessorsService
 [Table of Contents](Table_of_Contents.md)
 
 **Next Steps:**
-[Use a Local Launch Page](05_Use_a_Local_Launch_page.md)
+[Use a Local Launch Page](05_Use_a_Local_Launch_Page.md)
