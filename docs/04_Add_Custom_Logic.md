@@ -3,10 +3,10 @@
 **Previous Steps**
 [Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md).
 
-[Table of Contents](Table_of_Contents.md)
+[Table of Contents](Table_of_Contents.md).
 
 **Next Steps:**
-[Use a Local Launch Page](05_Use_a_Local_Launch_Page.md)
+[Use a Local Launch Page](05_Use_a_Local_Launch_Page.md).
 
 ## Add Custom Logic 
 
@@ -63,7 +63,7 @@ module.exports = ProcessorsService
 **Previous Steps**
 [Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md).
 
-[Table of Contents](Table_of_Contents.md)
+[Table of Contents](Table_of_Contents.md).
 
 **Next Steps:**
-[Use a Local Launch Page](05_Use_a_Local_Launch_Page.md)
+[Use a Local Launch Page](05_Use_a_Local_Launch_Page.md).
