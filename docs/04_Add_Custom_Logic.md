@@ -1,8 +1,12 @@
-# Add Custom Logic
+# Navigation
 
-## Prerequisits
+**Previous Steps**
+[Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md).
 
-You have implemented the user interface of your application. See [Add Fiori Elements UIs](Add_Fiori_Elements_UIs.md).
+[Table of Contents](Table_of_Contents.md)
+
+**Next Steps:**
+[Use a Local Launch Page](05_Use_a_Local_Launch_page.md)
 
 ## Add Custom Logic 
 
@@ -54,7 +58,12 @@ module.exports = ProcessorsService
 > handler file for the application defined in there. CAP exposes several events and you can easily
 > write handlers like the above.
 
-## Next Steps
+# Navigation
 
-You have now added custom logic to your application. 
-You can now add a launch page for local testing. See [Use a Local Launch Page](Use_a_Local_Launch_Page.md).
+**Previous Steps**
+[Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md).
+
+[Table of Contents](Table_of_Contents.md)
+
+**Next Steps:**
+[Use a Local Launch Page](05_Use_a_Local_Launch_page.md)
