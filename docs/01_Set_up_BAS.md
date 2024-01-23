@@ -1,3 +1,9 @@
+# Navigation
+
+[Table of Contents](Table_of_Contents.md)
+**Next Steps:**
+[Build a CAP Application](02_Build_a_CAP_Application.md)
+
 # Getting Started
 
 Welcome to this onboarding guide for developing applications on SAP BTP via BAS. The ultimate goal here is to build and deploy a full-stack application.
@@ -20,4 +26,4 @@ By that, you've successfully completed the setup guide of SAP BAS.
 
 # Next Steps 
 
-After you have set up SAP Business Application Studio, it's time to create your application based on SAP Cloud Application Programming Model (CAP). See [Build a CAP Application](Build_a_CAP_Application.md).
+After you have set up SAP Business Application Studio, it's time to create your application based on SAP Cloud Application Programming Model (CAP). See [Build a CAP Application](02_Build_a_CAP_Application.md).
