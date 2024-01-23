@@ -1,7 +1,12 @@
-# Add Authorization
+# Navigation
 
-## Prerequisits
-You have added to your application a launch page for local testing. See [Use a Local Launch Page](Use_a_Local_Launch_Page.md).
+**Previous Steps**
+ [Use a Local Launch Page](05_Use_a_Local_Launch_Page.md).
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Prepare for Production](07_Prepare_for_Production.md).
 
 ## adding CAP Role Restrictions to Entities
 
@@ -79,6 +84,12 @@ When accessing the `Incidents` service in your browser, you get a basic auth pop
 
 You can now access the `Incidents` application.
 
-## Next Steps
+# Navigation
 
-You have configured the access to your application. Now we can prepare the application for production. See [Prepare for Production](Prepare_for_Production.md). 
+**Previous Steps**
+ [Use a Local Launch Page](05_Use_a_Local_Launch_Page.md).
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Prepare for Production](07_Prepare_for_Production.md).
