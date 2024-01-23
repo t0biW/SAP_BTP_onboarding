@@ -6,7 +6,7 @@
 [Table of Contents](Table_of_Contents.md)
 
 **Next Steps:**
-[Build a CAP Application](03_Add_Fiori_Elements_UIs.md)
+[Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md)
 
 # Create a CAP Project
 
