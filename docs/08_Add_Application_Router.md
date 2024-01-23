@@ -1,7 +1,7 @@
 # Navigation
 
 **Previous Steps**
-[Prepare for Production](07_Prepare-for_Production.md).
+[Prepare for Production](07_Prepare_for_Production.md).
 
 
 [Table of Contents](Table_of_Contents.md).
@@ -68,7 +68,7 @@ This file has the configurations to start the app router.
 # Navigation
 
 **Previous Steps**
-[Prepare for Production](07_Prepare-for_Production.md).
+[Prepare for Production](07_Prepare_for_Production.md).
 
 
 [Table of Contents](Table_of_Contents.md).
