@@ -1,6 +1,12 @@
-# Prerequisits
+# Navigation
 
-You have the SAP Business Application Studio configured. See [Set Up SAP Business Application Studio](Set_up_BAS.md).
+**Previous Steps**
+[Set Up SAP Business Application Studio](01_Set_up_BAS.md).
+
+[Table of Contents](Table_of_Contents.md)
+
+**Next Steps:**
+[Build a CAP Application](02_Build_a_CAP_Application.md)
 
 # Create a CAP Project
 
@@ -289,6 +295,14 @@ extend projection ProcessorsService.Customers with { //[!code focus]
 
 # Next Steps
 
-After you have created your CAP application, you can start working on its user interface. See [Add Fiori Elements UIs](Add_Fiori_Elements_UIs.md).
+After you have created your CAP application, you can start working on its user interface.
+
+**Previous Steps**
+[Set Up SAP Business Application Studio](01_Set_up_BAS.md).
+
+[Table of Contents](Table_of_Contents.md)
+
+**Next Steps:**
+[Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md)
 
 
