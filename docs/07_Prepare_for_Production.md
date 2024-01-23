@@ -1,12 +1,18 @@
+# Navigation
+
+**Previous Steps**
+ [Add Authorization](06_Add_Authorization.md).
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Add Application Router](08_Add_Application_Router.md).
+
 # Prepare for Prduction
 
 If you followed CAP’s grow-as-you-go approach so far, you’ve developed your application with an 
 in-memory database and basic/mock authentication. For production we need respective 
 production-grade choices to be configured.
-
-## Prerequisites
-
-You have added basic authentication in your application. See [Add Authentication](Add_Authentiation.md).
 
 ## All in One Step
 
@@ -70,12 +76,12 @@ To validate everything is prepared as expected you can run a test build:
 cds build --production
 ```
 
-## Next Steps
+# Navigation
 
-You have prepared your application for production. Now you have to configure 
-an application router that acts as a single point-of-entry to your productive 
-application. See [Add Application Router](Add_Application_Router.md).
+**Previous Steps**
+ [Add Authorization](06_Add_Authorization.md).
 
+[Table of Contents](Table_of_Contents.md).
 
-
-
+**Next Steps:**
+[Add Application Router](08_Add_Application_Router.md).
