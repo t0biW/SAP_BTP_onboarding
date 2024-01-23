@@ -1,6 +1,7 @@
 # Navigation
 
 [Table of Contents](Table_of_Contents.md)
+
 **Next Steps:**
 [Build a CAP Application](02_Build_a_CAP_Application.md)
 
