@@ -1,7 +1,7 @@
 # Navigation
 
 **Previous Steps**
-[Set Up SAP Business Application Studio](02_Build_a_CAP_Application.md).
+[Build a CAP Application](02_Build_a_CAP_Application.md).
 
 [Table of Contents](Table_of_Contents.md)
 
@@ -253,7 +253,7 @@ You have added user interface to your application. The next step is to develop t
 # Navigation
 
 **Previous Steps**
-[Set Up SAP Business Application Studio](02_Build_a_CAP_Application.md).
+[Build a CAP Application](02_Build_a_CAP_Application.md).
 
 [Table of Contents](Table_of_Contents.md)
 
