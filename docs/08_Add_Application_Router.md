@@ -1,8 +1,13 @@
-# Add Application Router
+# Navigation
 
-## Prerequisites
+**Previous Steps**
+[Prepare for Production](07_Prepare-for_Production.md).
 
-You have prepared your application for production. See [Prepare for Production](Prepare-for_Production.md).
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Set Up Launchpad](09_Set_Up_Launchpad.md).
 
 ## Overview
 
@@ -60,8 +65,13 @@ This file has the configurations required for routing. The `welcomeFile` propert
 
 This file has the configurations to start the app router.
 
-## Next Steps: Deploy to Cloud Foundry
+# Navigation
 
-Before deploying to Cloud Foundry, you have to replace the launch page you used for local 
-testing with a launchpad provided by the Portal service. See [Add Launchpad](Set_Up_Launchpad.md).
+**Previous Steps**
+[Prepare for Production](07_Prepare-for_Production.md).
 
+
+[Table of Contents](Table_of_Contents.md).
+
+**Next Steps:**
+[Set Up Launchpad](09_Set_Up_Launchpad.md).
