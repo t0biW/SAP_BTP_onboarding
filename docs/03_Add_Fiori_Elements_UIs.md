@@ -1,6 +1,12 @@
-# Prerequisites
+# Navigation
 
-You have built your CAP application. See [Build a CAP application](Build_a_CAP_Application.md).
+**Previous Steps**
+[Set Up SAP Business Application Studio](02_Build_a_CAP_Application.md).
+
+[Table of Contents](Table_of_Contents.md)
+
+**Next Steps:**
+[Add Custom Logic](04_Add_Custom_Logic.md)
 
 # Overview
 
@@ -243,4 +249,13 @@ annotate ProcessorsService.Incidents with @odata.draft.enabled; //[!code focus]
 # Next Steps
 
 You have added user interface to your application. The next step is to develop the business logic of your application.
-See [Add Custom Logic](Add_Custom_Logic.md).
+
+# Navigation
+
+**Previous Steps**
+[Set Up SAP Business Application Studio](02_Build_a_CAP_Application.md).
+
+[Table of Contents](Table_of_Contents.md)
+
+**Next Steps:**
+[Add Custom Logic](04_Add_Custom_Logic.md)
