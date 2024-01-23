@@ -246,10 +246,6 @@ service ProcessorsService {
 annotate ProcessorsService.Incidents with @odata.draft.enabled; //[!code focus]
 ---
 
-# Next Steps
-
-You have added user interface to your application. The next step is to develop the business logic of your application.
-
 # Navigation
 
 **Previous Steps**
