@@ -84,7 +84,6 @@ This runs the service in an application modeler terminal session and automatical
 1. Choose **Open Page Map** under **Application Info - Incidents** tab.
 
 <img src="../docs/pictures/Configure_List_Report_1.png" alt="" width="800"/>
-![](../docs/pictures/Configure_List_Report_1.png)
 
 You will see the properties on the right side of the page map. You can edit these to update the UI of the application.
 
@@ -149,7 +148,7 @@ Description (status/descr) | Status
 
 <img src="../docs/pictures/Configure_List_Report_7.png" alt="" width="800"/>
 
-19. The list page of hte incident app should look like this below.
+19. The list page of the incident app should look like this below.
 
 <img src="../docs/pictures/Configure_List_Report_8.png" alt="" width="800"/>
 
@@ -238,13 +237,13 @@ Open the file `proccessors-service.cds` which is in the `./srv` folder.
 
 Enabling draft for an entity allows the users to edit the entities. To enable draft for an entity exposed by a service, simply annotate it with `@odata.draft.enabled` as in this example:
 
----
+```
 service ProcessorsService { 
   ...
 }
 ...
 annotate ProcessorsService.Incidents with @odata.draft.enabled; //[!code focus]
----
+```
 
 # Navigation
 
