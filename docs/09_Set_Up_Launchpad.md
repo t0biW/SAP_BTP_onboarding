@@ -235,7 +235,7 @@ In this step, you add the intents `Incidents-display` to the application manifes
 
 5. Create a folder `i18n` inside the `portal-site` folder.
 
-6. Create two new files `defaultCatalogId.properties` and `defaultGroupId.properties` in hte `i18n`
+6. Create two new files `defaultCatalogId.properties` and `defaultGroupId.properties` in the `i18n`
    folder and paste the following code snippet in the file:
 
    - `i18n/defaultCatalogId.properties`:
