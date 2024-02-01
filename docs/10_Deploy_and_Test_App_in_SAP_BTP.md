@@ -9,7 +9,7 @@
 
 ## Prerequisites
 
-- Set up a global accountin SAP BTP.
+- Set up a global account in SAP BTP.
 
 - User Role Assignment.
 
@@ -21,7 +21,7 @@ The SAP BTP, Cloud Foundry environment allows you to create polyglot cloud appli
 
 1. Open the terminal by clicking the burger menu and choose **Terminal** &rarr; **New Terminal**.
 
-We##ll be using the Cloud MTA Build Tool to execute the deployment. The modules and services are configured in an `mta.yaml` deployment descriptor file that we have already generated
+We'll be using the Cloud MTA Build Tool to execute the deployment. The modules and services are configured in an `mta.yaml` deployment descriptor file that we have already generated
 
 2. Run the following command to assemble everything into a single `mta.tar` archive:
 
