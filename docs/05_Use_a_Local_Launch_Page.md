@@ -71,7 +71,7 @@ that uses the built-in UI5 shell in the `app` folder. Let's do that now.
 
 ## Check the launchpage.html file 
 
-Let#s have a look at the `launchpage.html` file and the configuration in there. In the first script you wil lsee:
+Let's have a look at the `launchpage.html` file and the configuration in there. In the first script you will see:
 
 ```html
 	<script>
