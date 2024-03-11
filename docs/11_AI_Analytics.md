@@ -40,7 +40,7 @@ annotate service.Incidents with @(
 );
 ```
 
-> **_NOTE:_** Technically the button is now already existent in our view. By opening our incidents view (`cds watch` in the root of the project &rarr; localhost &rarr; `/launchpage.html` &rarr; Incident_Management) The "Evaluate_AI" button occurs next to the "Create" and "Delete" button. However, nothing happens when pressing it since the functionality still need to be implemented.
+> **_NOTE:_** Technically the button is now already existent in our view. By opening our incidents view (`cds watch` in the root of the project &rarr; localhost &rarr; `/launchpage.html` &rarr; Incident_Management) The `Evaluate_AI` button occurs next to the `Create` and `Delete` button. However, nothing happens when pressing it since the functionality still need to be implemented.
 
 3. Add an event handler in the `processors-service.js` file. For that, go back in the `srv` folder and open the `processors-service.js` file.
   Add our checkAI action in hte init() like following:
@@ -53,9 +53,9 @@ annotate service.Incidents with @(
   }
 ```
 
-Now the "onCHeckAi(req)" functions remains to be implemented.
+Now the `onCHeckAi(req)` functions remains to be implemented.
 
-4. Now we implement the functionality of the button. For that, we create a new function below "changeUrgencyDueToSubject(data)".
+4. Now we implement the functionality of the button. For that, we create a new function below `changeUrgencyDueToSubject(data)`.
   The function needs to handle following three points:
     - Get the Incidents data and convert it into csv format.
     - Get the user input.
@@ -74,7 +74,7 @@ async onCheckAI(req) {
     })
 }
 ```
-By using a "SELECT" statement, we get the Incidents data in JSON format. The remaining code converts it into csv format.
+By using a `SELECT` statement, we get the Incidents data in JSON format. The remaining code converts it into csv format.
 
 5. Now we get the user input by adding this:
 
@@ -85,7 +85,7 @@ async onCheckAI(req) {
 }
 ```
 
-6. The next step is to form the query and send it to the AI endpoint. For that, we define two separate functions "getToken()" and "doQuery(bearerToken,userInput,csv)":
+6. The next step is to form the query and send it to the AI endpoint. For that, we define two separate functions `getToken()` and `doQuery(bearerToken,userInput,csv)`:
 
 ```js
 async function getToken() {
@@ -148,9 +148,9 @@ return fetch(url, requestOptions)
 }
 ```
 
-The "getToken()" function yielda the "BearerToken", a necessary authentication token for the AI query. With that, "doQuery(bearerToken,userInput,csv)" perform the query.
+The `getToken()` function yielda the `BearerToken`, a necessary authentication token for the AI query. With that, `doQuery(bearerToken,userInput,csv)` perform the query.
 
-7. With the help of the two functions above, we can finalize our button by adding this to our "onCheckAI(req)" function:
+7. With the help of the two functions above, we can finalize our button by adding this to our `onCheckAI(req)` function:
 
 ```js
   async onCheckAI(req) {
@@ -165,7 +165,7 @@ The "getToken()" function yielda the "BearerToken", a necessary authentication t
   }
 ```
 
-With that, our "Evaluate_AI" button is ready to be used. Feel free to play around and execute some interesting queries about the incidents!
+With that, our `Evaluate_AI` button is ready to be used. Feel free to play around and execute some interesting queries about the incidents!
 
 ## Next Steps
 
