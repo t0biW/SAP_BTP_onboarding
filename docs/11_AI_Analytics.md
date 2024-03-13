@@ -1,7 +1,7 @@
 # Navigation
 
 **Previous Steps**
-[Deplay and Test App in SAP BTP](10_Deplay_and_Test_App_in_SAP_BTP.md).
+[Deploy and Test App in SAP BTP](10_Deploy_and_Test_App_in_SAP_BTP.md).
 
 [Table of Contents](Table_of_Contents.md).
 
