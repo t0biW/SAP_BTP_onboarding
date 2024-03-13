@@ -85,14 +85,34 @@ async onCheckAI(req) {
 }
 ```
 
-6. The next step is to form the query and send it to the AI endpoint. For that, we define two separate functions `getToken()` and `doQuery(bearerToken,userInput,csv)`:
+6. Since we are working with sensitive data in the following tasks, we now create a `.env` file:
+
+   - Navigate to the root of the project and type in following in the terminal:
+      ```
+      npm install dotenv
+      ```
+   - Create a new file in hte root of the project and name it `.env`. Write following in the file:
+
+      ```
+      USERNAME=
+      PASSWORD=
+      ```
+   - Open the `.gitignore` file and add `.env` in the `# CAP incidents-mgmt` section.
+  
+   - Open the `processor-service.js` file and write following in the first line of the file:
+
+      ```
+      require('dotenv').config();
+      ```
+
+7. The next step is to form the query and send it to the AI endpoint. For that, we define two separate functions `getToken()` and `doQuery(bearerToken,userInput,csv)`:
 
 ```js
 async function getToken() {
     
   const url = 'https://btplearning-w4kbx4of.authentication.us10.hana.ondemand.com/oauth/token?grant_type=client_credentials&response_type=token';
-  const username = '';
-  const password = '';
+  const username = process.env.USERNAME;
+  const password = process.env.PASSWORD;
   
   const headers = new Headers();
   headers.append('Authorization', 'Basic ' + btoa(username + ':' + password));
@@ -126,7 +146,7 @@ async function doQuery(token,query,inputCsv) {
               "content": "Given following data in csv format:" + "\n \n" + inputCsv + "\n \n" + query
           }
       ],
-"max_tokens": 100,
+"max_tokens": 1000,
 "temperature": 0.0,
 "frequency_penalty": 0,
 "presence_penalty": 0,
@@ -150,7 +170,7 @@ return fetch(url, requestOptions)
 
 The `getToken()` function yielda the `BearerToken`, a necessary authentication token for the AI query. With that, `doQuery(bearerToken,userInput,csv)` perform the query.
 
-7. With the help of the two functions above, we can finalize our button by adding this to our `onCheckAI(req)` function:
+8. With the help of the two functions above, we can finalize our button by adding this to our `onCheckAI(req)` function:
 
 ```js
   async onCheckAI(req) {
