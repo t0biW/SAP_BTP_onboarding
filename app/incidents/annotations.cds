@@ -4,6 +4,11 @@ using from '../../db/schema';
 annotate service.Incidents with @(
     UI.LineItem : [
         {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'ProcessorsService.EntityContainer/checkAI',
+            Label : '{i18n>Evaluate_AI}'
+        },
+        {
             $Type : 'UI.DataField',
             Value : title,
         },

@@ -5,6 +5,9 @@
 
 [Table of Contents](Table_of_Contents.md).
 
+**Next Steps**
+[AI Analytics](11_AI_Analytics.md).
+
 # (This is an unfinished draft!) Deploy in SAP BTP, Cloud Foundry Runtime
 
 ## Prerequisites
