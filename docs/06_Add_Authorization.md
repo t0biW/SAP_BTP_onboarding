@@ -5,10 +5,14 @@
 
 [Table of Contents](Table_of_Contents.md).
 
+[CAP Documentation](https://cap.cloud.sap/docs/)
+
 **Next Steps:**
 [Prepare for Production](07_Prepare_for_Production.md).
 
-## adding CAP Role Restrictions to Entities
+## adding CAP Role Restrictions to Entities (Optional!)
+
+> **_INFO:_** This onboarding step is completely optional and just a PoC of how authorization works with CAP.
 
 1. Open the file `srv/processors-service.cds`.
 
