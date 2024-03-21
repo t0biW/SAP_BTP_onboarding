@@ -5,7 +5,7 @@
 
 [Table of Contents](Table_of_Contents.md).
 
-[CAP Documentation](https://cap.cloud.sap/docs/)
+[CAP Documentation](https://cap.cloud.sap/docs/).
 
 **Next Steps:**
 [Prepare for Production](07_Prepare_for_Production.md).
