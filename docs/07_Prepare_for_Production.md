@@ -5,6 +5,8 @@
 
 [Table of Contents](Table_of_Contents.md).
 
+[CAP Documentation](https://cap.cloud.sap/docs/).
+
 **Next Steps:**
 [Add Application Router](08_Add_Application_Router.md).
 
