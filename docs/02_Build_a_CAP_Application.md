@@ -5,6 +5,8 @@
 
 [Table of Contents](Table_of_Contents.md)
 
+[CAP Documentation](https://cap.cloud.sap/docs/)
+
 **Next Steps:**
 [Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md)
 
@@ -140,6 +142,9 @@ Let's define a service _ProcessorsService_ for support engineers to process inci
 to create the service definition:
 
 1. Create a new file `processors-service.cds` in the `srv` folder.
+
+> **_NOTE:_** The [CAP service documentation](https://cap.cloud.sap/docs/about/#service-definitions-in-cds) might clarify possible ambiguities
+
 2. Paste the following code snippet in the `srv/processors-service.cds` file:
 
 ```
