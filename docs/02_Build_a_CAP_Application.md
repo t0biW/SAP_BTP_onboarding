@@ -3,12 +3,12 @@
 **Previous Steps**
 [Set Up SAP Business Application Studio](01_Set_up_BAS.md).
 
-[Table of Contents](Table_of_Contents.md)
+[Table of Contents](Table_of_Contents.md).
 
-[CAP Documentation](https://cap.cloud.sap/docs/)
+[CAP Documentation](https://cap.cloud.sap/docs/).
 
 **Next Steps:**
-[Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md)
+[Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md).
 
 # Create a CAP Project
 
