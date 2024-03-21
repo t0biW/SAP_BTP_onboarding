@@ -5,6 +5,8 @@
 
 [Table of Contents](Table_of_Contents.md).
 
+[CAP Documentation](https://cap.cloud.sap/docs/)
+
 **Next Steps:**
 [Use a Local Launch Page](05_Use_a_Local_Launch_Page.md).
 
@@ -14,7 +16,9 @@ In this tutorial, you add some custom code to the CAP application. Depending on 
 
 1. Create a new file `proccessors-service.js` in the `srv` folder of your application.
 
-2. Add the following code (the actual business logic) to this file:
+> **_NOTE:_** The [CAP event handler documentation](https://cap.cloud.sap/docs/java/provisioning-api#handlerclasses) might clarify ambiguities here.
+
+3. Add the following code (the actual business logic) to this file:
 
 ```js
 
