@@ -5,10 +5,12 @@
 
 [Table of Contents](Table_of_Contents.md).
 
+[CAP Documentation](https://cap.cloud.sap/docs/).
+
 **Next Steps**
 [AI Analytics](11_AI_Analytics.md).
 
-# (This is an unfinished draft!) Deploy in SAP BTP, Cloud Foundry Runtime
+# Deploy in SAP BTP, Cloud Foundry Runtime
 
 ## Prerequisites
 
@@ -55,3 +57,16 @@ Application "incident-management-approuter" started and available at
 ```
 
 This is the URL of the app router application. Paste it in your browser to see your deployed application.
+
+
+# Navigation
+
+**Previous Steps**
+[Set Up Launchpad](09_Set_Up_Launchpad.md).
+
+[Table of Contents](Table_of_Contents.md).
+
+[CAP Documentation](https://cap.cloud.sap/docs/).
+
+**Next Steps**
+[AI Analytics](11_AI_Analytics.md).
