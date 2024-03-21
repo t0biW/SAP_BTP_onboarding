@@ -12,4 +12,4 @@ File or Folder | Purpose
 `srv/` | your service models and code go here
 `package.json` | project metadata and configuration
 
-However, we strongly recommend to follow our [Onboarding Guide](./docs/Table_of_Contents.md) to experience the procedure of building an application yourself.
+However, we strongly recommend to follow our [Onboarding Guide](./docs/Table_of_Contents.md) along with the [CAP Documentation](https://cap.cloud.sap/docs/) to experience the procedure of building an application yourself.
