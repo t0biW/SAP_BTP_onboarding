@@ -5,6 +5,8 @@
 
 [Table of Contents](Table_of_Contents.md).
 
+[CAP Documentation](https://cap.cloud.sap/docs/).
+
 ## Fiori Action
 
 In this Guide we want to use AI to help us with the Analysis of our incidents. 
@@ -13,7 +15,10 @@ The AI then evaluates this question an the response is then represented as a pop
 Our goal can simply be achieved by utilizing `actions` from Fiori:
 
 1. Navigate to `srv` and open the `processors-service.cds` file.
-   Add teh "checkAI" action to the "ProcessorsService":
+
+> **_NOTE:_** The [CAP documentation for actions](https://cap.cloud.sap/docs/java/application-services#trigger-action-or-function) might be helpful here.
+
+   Add the "checkAI" action to the "ProcessorsService":
 
 ```
 service ProcessorsService { 
@@ -60,6 +65,9 @@ Now the `onCHeckAi(req)` functions remains to be implemented.
     - Get the Incidents data and convert it into csv format.
     - Get the user input.
     - Form the input query and send the query to the AI endpoint.
+  
+> **_NOTE:_** Again, the CAP documentation might be helpful here regarding [queries](https://cap.cloud.sap/docs/node.js/cds-ql#select-from).
+
    At first we gather the Incidents data:
 
 ```js
@@ -189,7 +197,7 @@ With that, our `Evaluate_AI` button is ready to be used. Feel free to play aroun
 
 ## Next Steps
 
-You have inmplented a button that can be used to ask an AI service for analysis of data.
+You have implented a button that can be used to ask an AI service for analysis of data.
 
 **Previous Steps**
 [Deplay and Test App in SAP BTP](10_Deplay_and_Test_App_in_SAP_BTP.md).
