@@ -2,6 +2,8 @@
 
 [Table of Contents](Table_of_Contents.md)
 
+[CAP Documentation](https://cap.cloud.sap/docs/)
+
 **Next Steps:**
 [Build a CAP Application](02_Build_a_CAP_Application.md)
 
