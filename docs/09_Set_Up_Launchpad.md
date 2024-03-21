@@ -3,8 +3,9 @@
 **Previous Steps**
 [Add Application Router](08_Add_Application_Router.md).
 
-
 [Table of Contents](Table_of_Contents.md).
+
+[CAP Documentation](https://cap.cloud.sap/docs/).
 
 **Next Steps:**
 [Deploy and Test App in SAP BTP](10_Deploy_and_Test_App_in_SAP_BTP.md).
