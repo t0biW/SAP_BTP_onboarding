@@ -3,8 +3,9 @@
 **Previous Steps**
 [Prepare for Production](07_Prepare_for_Production.md).
 
-
 [Table of Contents](Table_of_Contents.md).
+
+[CAP Documentation](https://cap.cloud.sap/docs/).
 
 **Next Steps:**
 [Set Up Launchpad](09_Set_Up_Launchpad.md).
