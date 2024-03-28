@@ -7,6 +7,7 @@ class ProcessorsService extends cds.ApplicationService {
     this.before("UPDATE", "Incidents", (req) => this.onUpdate(req));
     this.before("CREATE", "Incidents", (req) => this.changeUrgencyDueToSubject(req.data));
     this.on("checkAI", (req) => this.onCheckAI(req));
+    this.on("diagram", (req) => this.onDiagram(req));
     return super.init();
   }
 
@@ -42,6 +43,20 @@ class ProcessorsService extends cds.ApplicationService {
 
   }
 
+  async onDiagram(req) {
+    let incidents = await SELECT`ID,title,urgency_code,status_code`.from (this.entities.Incidents);
+    let formattedIncidents = JSON.stringify(incidents);
+    console.log(formattedIncidents);
+    let userInput = req.data.Query;
+    let bearerToken = await getToken();
+    let response = await doDiagramQuery(bearerToken,userInput,formattedIncidents);
+
+    req.info(response.choices[0].message.content);
+
+    console.log("Question: \n" + userInput);
+    console.log("Answer: \n" + response.choices[0].message.content);
+  }
+
   /** Custom Validation */
   async onUpdate (req) {
     const { status_code } = await SELECT.one(req.subject, i => i.status_code).where({ID: req.data.ID})
@@ -72,28 +87,28 @@ async function getToken() {
   
 }
 
-async function doQuery(token,query,inputCsv) {
+async function doQuery(token,query,input) {
 
   const url = "https://api.ai.prod.us-east-1.aws.ml.hana.ondemand.com/v2/inference/deployments/d85ed0c1b02d8a27/chat/completions?api-version=2023-05-15";
-  const headers = {
+    const headers = {
       "Content-Type": "application/json",
       "AI-Resource-Group": "default",
       "Authorization": "Bearer "  + token
-  };
-  
-  const body = {
+    };
+    
+    const body = {
       "messages": [
-          {
-              "role": "user",
-              "content": "Given following data in csv format:" + "\n \n" + inputCsv + "\n \n" + query
-          }
+        {
+          "role": "user",
+          "content": "Given following data in csv format:" + "\n \n" + input + "\n \n" + query
+        }
       ],
-"max_tokens": 1000,
-"temperature": 0.0,
-"frequency_penalty": 0,
-"presence_penalty": 0,
-"stop": "null"
-};
+      "max_tokens": 1000,
+      "temperature": 0.0,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "stop": "null"
+    };
 
 const requestOptions = {
   method: "POST",
@@ -108,4 +123,43 @@ return fetch(url, requestOptions)
 })
 .catch(error => console.log(error));
 }
+
+async function doDiagramQuery(token,query,input) {
+
+  const url = "https://api.ai.prod.us-east-1.aws.ml.hana.ondemand.com/v2/inference/deployments/d85ed0c1b02d8a27/chat/completions?api-version=2023-05-15";
+    const headers = {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "AI-Resource-Group": "default",
+      "Authorization": "Bearer "  + token
+    };
+    
+    const body = {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Given following data in json format:" + "\n \n" + input + "\n \n" + query + "\n \n" + "Please ONLY reply with json format. DON'T repl with a python script or plaintext or whatsoever."
+        }
+      ],
+      "max_tokens": 1000,
+      "temperature": 0.0,
+      "frequency_penalty": 0,
+      "presence_penalty": 0,
+      "stop": "null"
+    };
+
+const requestOptions = {
+  method: "POST",
+  headers: headers,
+  body: JSON.stringify(body)
+};
+
+return fetch(url, requestOptions)
+.then(response => response.json())
+.then(data => {
+  return data
+})
+.catch(error => console.log(error));
+}
+
 module.exports = ProcessorsService

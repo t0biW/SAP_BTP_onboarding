@@ -17,16 +17,16 @@
         },
         "crossNavigation": {
             "inbounds": {
-              "intent1": {
-                "signature": {
-                  "parameters": {},
-                  "additionalParameters": "allowed"
-                },
-                "semanticObject": "Incidents",
-                "action": "display"
-              }
+                "intent1": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "Incidents",
+                    "action": "display"
+                }
             }
-          },
+        },
         "dataSources": {
             "mainService": {
                 "uri": "/odata/v4/processors/",
@@ -92,6 +92,22 @@
                 "uri": "i18n/i18n.properties"
             }
         },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.fe.templates.ListReport.ListReportController": {
+                        "controllerName": "ns.incidents.controller.ListReportExt"
+                    }
+                },
+                "sap.ui.viewExtensions": {
+                    "sap.fe.templates.ListReport.ListReportController": {
+                        "type": "XML",
+                        "className": "sap.ui.core.Fragment",
+                        "fragmentName": "ns.incidents.fragment.UploadDiagram"
+                    }
+                }
+            }
+        },
         "resources": {
             "css": []
         },
@@ -132,6 +148,14 @@
                             "initialLoad": "Enabled",
                             "controlConfiguration": {
                                 "@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "actions": {
+                                        "openDiagram": {
+                                            "id": "openUpDiagram",
+                                            "text": "{{Generate_Diagram}}",
+                                            "press": ".extension.ns.incidents.controller.ListReportExt.openDiagram",
+                                            "requiresSelection": false
+                                        }
+                                    },
                                     "tableSettings": {
                                         "type": "ResponsiveTable"
                                     }
