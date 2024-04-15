@@ -7,49 +7,41 @@
    xmlns:mvc="sap.ui.core.mvc" 
    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
    xmlns:viz.data="sap.viz.ui5.data" height="100%">
-   <Dialog
+   <Dialog id="_IDGenDialog1"
       title="{i18n>Generate_Diagram}">
       <content>
-      	<l:VerticalLayout
-		    class="sapUiContentPadding"
-		    width="100%">
-		    <l:content>
-			    <TextArea value="" rows="3" />
-		    </l:content>
-	    </l:VerticalLayout>
-        <!-- Button einfügen -->
-        <layout:flexContent>
+        <VBox id="getUserQuery" binding="{/diagram(...)}"> 
+            <TextArea id="_IDGenTextArea1" value="{$Parameter/Query}" rows="3" />
+            <Button id="buttonId" text="Evaluate Diagram" press="onPress" />
+        </VBox>
             <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
-                height='100%' width="100%" vizType='bar'>
+                height='400px' width="400px" vizType='bar'>
                 <viz:dataset>
-                    <viz.data:FlattenedDataset data="{/milk}">
+                    <viz.data:FlattenedDataset id="_IDGenFlattenedDataset1" data="{/results}">
                         <viz.data:dimensions>
-                            <viz.data:DimensionDefinition name="Store Name"
-                                value="{Store Name}" />
+                            <viz.data:DimensionDefinition id="_IDGenDimensionDefinition1" name="title"
+                                value="{title}" />
                         </viz.data:dimensions>
                         <viz.data:measures>
-                            <viz.data:MeasureDefinition name="Revenue"
-                                value="{Revenue}" />
-                            <viz.data:MeasureDefinition name="Cost"
-                                value="{Cost}" />
+                            <viz.data:MeasureDefinition id="_IDGenMeasureDefinition1" name="urgency_code"
+                                value="{urgency_code}" />
                         </viz.data:measures>
                     </viz.data:FlattenedDataset>
                 </viz:dataset>
 
                 <viz:feeds>
                     <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
-                        values="Revenue" />
-                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
-                        values="Store Name" />
+                        values="urgency_code" />
+                    <viz.feeds:FeedItem id="_IDGenFeedItem1" uid="categoryAxis" type="Dimension"
+                        values="title" />
                 </viz:feeds>
                 <viz:dependents>
                     <viz:Popover id="idPopOver"></viz:Popover>
                 </viz:dependents>
             </viz:VizFrame>
-        </layout:flexContent>
       </content>
       <endButton>
-        <Button text="{i18n>BTN_CANCEL_UPLOAD_LANDSCAPE}"
+        <Button id="_IDGenButton1" text="{i18n>CANCEL}"
           press=".onUploadDialogClose"/>
       </endButton>
    </Dialog>

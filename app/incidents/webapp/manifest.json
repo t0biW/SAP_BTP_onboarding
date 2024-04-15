@@ -98,13 +98,6 @@
                     "sap.fe.templates.ListReport.ListReportController": {
                         "controllerName": "ns.incidents.controller.ListReportExt"
                     }
-                },
-                "sap.ui.viewExtensions": {
-                    "sap.fe.templates.ListReport.ListReportController": {
-                        "type": "XML",
-                        "className": "sap.ui.core.Fragment",
-                        "fragmentName": "ns.incidents.fragment.UploadDiagram"
-                    }
                 }
             }
         },

@@ -50,11 +50,13 @@ class ProcessorsService extends cds.ApplicationService {
     let userInput = req.data.Query;
     let bearerToken = await getToken();
     let response = await doDiagramQuery(bearerToken,userInput,formattedIncidents);
+    
+    //console.log("Answer: \n" + response.choices[0].message.content);
+    return JSON.stringify(response.choices[0].message.content);
 
-    req.info(response.choices[0].message.content);
+    //req.info(response.choices[0].message.content);
 
     console.log("Question: \n" + userInput);
-    console.log("Answer: \n" + response.choices[0].message.content);
   }
 
   /** Custom Validation */
@@ -138,7 +140,7 @@ async function doDiagramQuery(token,query,input) {
       "messages": [
         {
           "role": "user",
-          "content": "Given following data in json format:" + "\n \n" + input + "\n \n" + query + "\n \n" + "Please ONLY reply with json format. DON'T repl with a python script or plaintext or whatsoever."
+          "content": "Given following data in json format:" + "\n \n" + input + "\n \n" + query + "\n \n" + "Please ONLY reply with JSON format. DON'T repl with a python script or plaintext or whatsoever. Further, replace in urgency_code every H with a 3, M with a 2 and L with a 1 in the resulting json and store it as a number (not as a String!)."
         }
       ],
       "max_tokens": 1000,

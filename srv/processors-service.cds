@@ -2,7 +2,7 @@ using { sap.capire.incidents as my } from '../db/schema';
 
 service ProcessorsService { 
   action checkAI (Query: String);
-  action diagram (Query: String);
+  function diagram (Query: String) returns LargeString;
   entity Incidents as projection on my.Incidents
   entity Customers as projection on my.Customers;
 
