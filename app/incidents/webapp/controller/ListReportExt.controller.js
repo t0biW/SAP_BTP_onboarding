@@ -1,53 +1,29 @@
 sap.ui.define([
-    'sap/m/MessageToast',
-    'sap/m/MessageBox',
-    "sap/ui/core/mvc/ControllerExtension",
-  ], (MessageToast, MessageBox, ControllerExtension) => ControllerExtension.extend('ns.incidents.controller.ListReportExt', {
-    async openDiagram() {
-        if (!this.oUploadDialog) {
-          this.oUploadDialog = await this.base.getExtensionAPI().loadFragment({
-            name: 'ns.incidents.ext.fragment.UploadDiagram',
-            controller: this
-          });
-          this.getView().addDependent(this.oUploadDialog);
-        }
-        this.oUploadDialog.open();
-      },
-
-    async onPress(oEvent) {
-
-      let diagramJson;
-      await oEvent.getSource().oParent.getObjectBinding().execute().then((oData) => {
-        diagramJson = JSON.parse(oEvent.getSource().oParent.getObjectBinding().getBoundContext().getObject().value);
-        const jsonModel = new sap.ui.model.json.JSONModel({results: diagramJson});
-
-        sap.ui.getCore().byId("idVizFrame").setModel(jsonModel);
+  'sap/m/MessageToast',
+  'sap/m/MessageBox',
+  "sap/ui/core/mvc/ControllerExtension",
+], (MessageToast, MessageBox, ControllerExtension) => ControllerExtension.extend('ns.incidents.controller.ListReportExt', {
+  async openDiagram() {
+    if (!this.oUploadDialog) {
+      this.oUploadDialog = await this.base.getExtensionAPI().loadFragment({
+        name: 'ns.incidents.ext.fragment.UploadDiagram',
+        controller: this
       });
-      console.log(diagramJson);
-    },
-
-    onUploadDialogClose() {
-      this.oUploadDialog.close();
+      this.getView().addDependent(this.oUploadDialog);
     }
+    this.oUploadDialog.open();
+  },
 
-      /*
-      let diagramJson;
-      const Query = oEvent.getSource().getParent().getAggregation("items").filter((item) => item.getId() === "_IDGenTextArea1").pop().getValue();
-      this.base.editFlow.invokeAction("/diagram", {model:this.getView().getModel(), requiresNavigation: false, 
-        skipParameterDialog: true,parameterValues: [
-          { name: 'Query', value: Query},
-        ],}).then((oData) => {
-          diagramJson = oData;
-          this.getView().getModel().setProperty("/diagramJson", diagramJson);
-        }).catch((error) => console.error(error))
-      */
+  async onPress(oEvent) {
 
-      //oEvent.getSource().oParent.getObjectBinding().setParameter("Query", "Hello").execute();
-      // this.getView().byId("getUserQuery").getObjectBinding().execute();
+    await oEvent.getSource().oParent.getObjectBinding().execute().then((oData) => {
+      const aiResponse = JSON.parse(oEvent.getSource().oParent.getObjectBinding().getBoundContext().getObject().value);
+      const jsonModel = new sap.ui.model.json.JSONModel(aiResponse);
+      sap.ui.getCore().byId("idVizFrame").setModel(jsonModel);
+    });
+  },
 
-    /*
-    onInit() {
-        console.log("Hallo");
-    }
-    */
-  }));
+  onUploadDialogClose() {
+    this.oUploadDialog.close();
+  }
+}));

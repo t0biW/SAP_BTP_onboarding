@@ -5,11 +5,6 @@ annotate service.Incidents with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataFieldForAction',
-            Action : 'ProcessorsService.EntityContainer/diagram',
-            Label : '{i18n>Diagram}'
-        },
-        {
-            $Type : 'UI.DataFieldForAction',
             Action : 'ProcessorsService.EntityContainer/checkAI',
             Label : '{i18n>Evaluate_AI}'
         },
