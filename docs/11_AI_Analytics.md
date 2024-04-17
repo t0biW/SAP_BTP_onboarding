@@ -58,7 +58,7 @@ annotate service.Incidents with @(
   }
 ```
 
-Now the `onCHeckAi(req)` functions remains to be implemented.
+Now the `onCheckAi(req)` functions remains to be implemented.
 
 4. Now we implement the functionality of the button. For that, we create a new function below `changeUrgencyDueToSubject(data)`.
   The function needs to handle following three points:
