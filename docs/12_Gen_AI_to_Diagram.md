@@ -274,7 +274,8 @@ async function doDiagramQuery(token, query, input) {
 }
 ```
 
-With that, the implementation of our custom action is completed. 
+With that, the implementation of our custom action is completed.
+With that, the onboarding guide is completed, **congratulations**! 
 
 **Previous Steps**
 [Deplay and Test App in SAP BTP](10_Deplay_and_Test_App_in_SAP_BTP.md).
