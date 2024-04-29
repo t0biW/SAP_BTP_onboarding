@@ -8,7 +8,7 @@
 [CAP Documentation](https://cap.cloud.sap/docs/).
 
 **Next Steps**
-[GEN AI to Diagram](12_Gen_AI_to_Diagram.md).
+[Gen AI to Diagram](12_Gen_AI_to_Diagram.md).
 
 ## Fiori Action
 
