@@ -81,7 +81,7 @@ Here, this initiates the usage of an Extention. Again, we now create this extent
                 <TextArea
                     width="300px"
                     id="_IDGenTextArea1"
-                    value="{$Parameter/Query} Give me the title and urgency of all incidents. "
+                    value="{data>/Query}"
                     rows="4"
                     editable="false"
                 />
@@ -158,21 +158,20 @@ sap.ui.define([
   'sap/m/MessageToast',
   'sap/m/MessageBox',
   "sap/ui/core/mvc/ControllerExtension",
-], (MessageToast, MessageBox, ControllerExtension) => ControllerExtension.extend('ns.incidents.controller.ListReportExt', {
-  async openDiagram() {
-    if (!this.oUploadDialog) {
-      this.oUploadDialog = await this.base.getExtensionAPI().loadFragment({
-        name: 'ns.incidents.ext.fragment.UploadDiagram',
-        controller: this
+  "sap/ui/model/json/JSONModel"
+], (MessageToast, MessageBox, ControllerExtension, JSONModel) => ControllerExtension.extend('ns.incidents.controller.ListReportExt', {
+  override: {
+    onBeforeRendering() {
+      const dataModel = new JSONModel({
+        Query: "Give me the title and urgency_code of all incidents.",
       });
-      this.getView().addDependent(this.oUploadDialog);
-    }
-    this.oUploadDialog.open();
+      this.getView().setModel(dataModel, "data");
+    },
   },
 
   async onPress(oEvent) {
-
-    await oEvent.getSource().oParent.getObjectBinding().execute().then((oData) => {
+    const sQuery = this.getView().getModel("data").getProperty("/Query");
+    await oEvent.getSource().oParent.getObjectBinding().setParameter("Query", sQuery).execute().then((oData) => {
       const aiResponse = JSON.parse(oEvent.getSource().oParent.getObjectBinding().getBoundContext().getObject().value);
       const jsonModel = new sap.ui.model.json.JSONModel(aiResponse);
       sap.ui.getCore().byId("idVizFrame").setModel(jsonModel);
@@ -185,7 +184,7 @@ sap.ui.define([
 }));
 ```
 
-The function `openDiagram()` loads our specified fragment. Mainly, the `onPress(oEvent)` function is relevant, since this function is executed whenn we press the button in order to generate the diagramm. This function waits for the answer from the AI (the `await` line) and then converts this answer to a suitable format and then sets the model of our diagramm with this data.
+The function `onBeforeRendering()` sets the values into the fragment. Mainly, the `onPress(oEvent)` function is relevant, since this function is executed whenn we press the button in order to generate the diagramm. This function waits for the answer from the AI (the `await` line) and then converts this answer to a suitable format and then sets the model of our diagramm with this data.
 
 > **_NOTE:_** It is not obvious how this function gets the return from the AI. First, the implementation of the backend will be covered late in this guide and second, in our fragment, the textfield with the static input question is bounded to an action `binding="{/diagram(...)}"`. This results in the function `diagram` being executed in the backend when pressing the `Evaluate_Diagram` button.
 
