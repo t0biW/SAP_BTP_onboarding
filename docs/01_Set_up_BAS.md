@@ -9,7 +9,7 @@
 
 # Getting Started
 
-Welcome to this onboarding guide for developing applications on SAP BTP via BAS. The ultimate goal here is to build and deploy a full-stack application.
+Welcome to the onboarding guide for developing applications on SAP Business Technology Platform (BTP) via Business Application Studio (BAS). The ultimate goal here is to build and deploy a full-stack application.
 For that, it is necessary  to have a subaccount in SAP BTP to be able to subscribe to SAP Business Application Studio.
 
 ## Launch SAP Business Application Studio
@@ -20,7 +20,9 @@ For that, it is necessary  to have a subaccount in SAP BTP to be able to subscri
 4. Choose a **Dev Space Name** (e.g. `IncidentsManagement`).
 5. Choose template **Full stack Cloud Application** and choose **Create Dev Space**
 
-> **_INFO:_** Now your dev space will be created. This can take some minutes.
+> **_NOTE_:**
+> 
+>  Now your dev space will be created. This can take a few minutes.
 
 6. As soon as your dev space is in status `Running`, you can click its name to open it.
 
