@@ -225,7 +225,7 @@ In this step, you add the intents `Incidents-display` to the application manifes
 					"config": {
 						"theme.id": "sap_fiori_3",
 						"theme.active": ["sap_fiori_3", "sap_fiori_3_dark", "sap_belize_hcb", "sap_belize_hcw"],
-						"ui5VersionNumber": "1.115.0"
+						"ui5VersionNumber": "1.120.x"
 					}
 				}
 			}
