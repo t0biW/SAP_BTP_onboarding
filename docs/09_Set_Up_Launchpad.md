@@ -129,32 +129,10 @@ In this step, you add the intents `Incidents-display` to the application manifes
 
 1. Create a folder `portal-content` in the `packages/deploy-int` folder.
 
-2. Create a new file `package.json` inside the `portal-content` folder
+2. Create a folder `portal-site` inside the `portal-content` folder.
+
+3. create a new file `CommonDataModel.json` in the `portal-site` folder
    and paste the following code snippet in the file:
-
-```json
-{
-	"engines": {
-		"node": ">=8.0.0"
-	},
-	"name": "site-content",
-	"version": "3.17.0",
-	"description": "portal site content deployer package",
-	"license": "Apache-2.0",
-	"author": "Portal Team",
-	"dependencies": {
-		"@sap/portal-cf-content-deployer": "^4.20.0-20220206072628"
-	},
-	"scripts": {
-		"start": "node --harmony node_modules/@sap/portal-cf-content-deployer/src/index.js"
-	}
-}
-```
-
-3. Create a folder `portal-site` inside the `portal-content` folder.
-
-4. create a new file `CommonDataModel.json` in the `portal-site` folder
-   and paste the following code snippet in hte file:
 
 ```json
 {
@@ -234,9 +212,9 @@ In this step, you add the intents `Incidents-display` to the application manifes
 }
 ```
 
-5. Create a folder `i18n` inside the `portal-site` folder.
+4. Create a folder `i18n` inside the `portal-site` folder.
 
-6. Create two new files `defaultCatalogId.properties` and `defaultGroupId.properties` in the `i18n`
+5. Create two new files `defaultCatalogId.properties` and `defaultGroupId.properties` in the `i18n`
    folder and paste the following code snippet in the file:
 
    - `i18n/defaultCatalogId.properties`:
