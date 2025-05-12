@@ -14,7 +14,7 @@
 
 In this tutorial, you add some custom code to the CAP application. Depending on the contents of the property `title`, the custom code changes the value of the property `urgency_`.
 
-1. Create a new file `proccessors-service.js` in the `srv` folder of your application.
+1. Create a new file `processors-service.js` in the `srv` folder of your application.
 
 > **_NOTE:_** The [CAP event handler documentation](https://cap.cloud.sap/docs/java/provisioning-api#handlerclasses) might clarify ambiguities here.
 
