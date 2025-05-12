@@ -203,7 +203,7 @@ In this step, you add the intents `Incidents-display` to the application manifes
 					"config": {
 						"theme.id": "sap_fiori_3",
 						"theme.active": ["sap_fiori_3", "sap_fiori_3_dark", "sap_belize_hcb", "sap_belize_hcw"],
-						"ui5VersionNumber": "1.120.x"
+						"ui5VersionNumber": "1.120.30"
 					}
 				}
 			}
@@ -342,7 +342,7 @@ modules:
   ...
   - name: incident-management-portal-content-deployer
     type: com.sap.application.content
-    path: packages/deploy-int/portal-content
+    path: packages/portal-content
     requires:
       - name: incident-management-portal
         parameters:
