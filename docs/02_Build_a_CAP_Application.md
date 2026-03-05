@@ -34,7 +34,7 @@ This creates a folder `incidents-mgmt` with your newly created CAP project.
 5. Choose **Terminal** &rarr; **New Terminal** from its menu.
 6. You can now use the terminal to start the CAP server using following command:
 
-> **_INFO:_** you need to be in the project, i.e. first navigate to your project in hte terminal via `cd ./projects/incidents-mgmt`.
+> **_INFO:_** you need to be in the project, i.e. first navigate to your project in the terminal via `cd ./projects/incidents-mgmt`.
  
 ```bash
 cds watch
@@ -55,8 +55,9 @@ live reload enabled for browsers
  Waiting for some to arrive... // [!code focus]
 ```
 
-You are invited to let this command run while doing the next steps to get immediate feedback from the CAP server. 
+> **_INFO:_** You are invited to let this command run while doing the next steps to get immediate feedback from the CAP server. 
 So, let's go on adding a CDS model as follows...
+
 ---
 
 # Add a Domain Model
@@ -309,5 +310,6 @@ After you have created your CAP application, you can start working on its user i
 
 **Next Steps:**
 [Add Fiori Elements UIs](03_Add_Fiori_Elements_UIs.md)
+
 
 
