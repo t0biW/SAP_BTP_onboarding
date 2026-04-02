@@ -125,7 +125,7 @@ In the popup, select `descr` as the `Value Description Property` and press **App
 12. Select **status_code** under **Columns**. In the right pane, set **Text** to **status/descr** and **Text Arrangement** to **Text Only**,
     so that the user could see the human readable text instead of the status code.
     
-13. Navigate to `Customer` and select `name`. Click `Add` to add columns.
+13. Create a new column and navigate to `Customer` and select `name`. Click `Add` to add columns.
 
 > **_TIPP:_** To easily find this field, type the first few characters of `Customer`, followed by a `/` and a few characters of `name`, such as: `cus/n`.
 
