@@ -106,7 +106,7 @@ async onCheckAI(req) {
       ```
       npm install dotenv
       ```
-   - Create a new file in hte root of the project and name it `.env`. Write following in the file:
+   - Create a new file in the root of the project and name it `.env`. Write following in the file:
 
       ```
       USERNAME=
