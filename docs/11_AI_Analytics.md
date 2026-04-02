@@ -181,7 +181,7 @@ return fetch(url, requestOptions)
 }
 ```
 
-The `getToken()` function yielda the `BearerToken`, a necessary authentication token for the AI query. With that, `doQuery(bearerToken,userInput,csv)` perform the query.
+The `getToken()` function yields the `BearerToken`, a necessary authentication token for the AI query. With that, `doQuery(bearerToken,userInput,csv)` perform the query.
 
 8. With the help of the two functions above, we can finalize our button by adding this to our `onCheckAI(req)` function:
 
