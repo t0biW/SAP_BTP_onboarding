@@ -255,7 +255,7 @@ R;Resolved;2
 C;Closed;4
 ```
   
-- `db/data/sap.capire.incidents-IUrgency.csv`:
+- `db/data/sap.capire.incidents-Urgency.csv`:
 
 ```
 code;descr
