@@ -32,7 +32,14 @@ This creates a folder `incidents-mgmt` with your newly created CAP project.
 > **_INFO:_** This document is compatible with cds version 7. Please go to the package.json file and check whether the @sap/cds version is 7 or higher. If necessary, update the cds version in the dependencies to: `@sap/cds: >=7`.
 
 5. Choose **Terminal** &rarr; **New Terminal** from its menu.
-6. You can now use the terminal to start the CAP server using following command:
+
+6. We now install all required dependencies via following command:
+
+```bash
+npm install
+```
+   
+8. You can now use the terminal to start the CAP server using following command:
 
 > **_INFO:_** you need to be in the project, i.e. first navigate to your project in the terminal via `cd ./projects/incidents-mgmt`.
  
